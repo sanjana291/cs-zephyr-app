@@ -1,6 +1,6 @@
-# Zephyr Support for Calixto SoMs
+# Zephyr Support for CS SoMs
 
-This repository provides support for Calixto System-on-Modules (SoMs) in the Zephyr RTOS ecosystem. 
+This repository provides support for CS System-on-Modules (SoMs) in the Zephyr RTOS ecosystem. 
 The goal of this repository is to enable seamless development on Calixto SoMs using Zephyr by providing:
 
 - Board support packages (BSP)

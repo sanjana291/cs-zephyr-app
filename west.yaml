@@ -1,9 +1,14 @@
 manifest:
-  version: 1.0
+  self:
+    path: calixto-zephyr-app
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos/zephyr
 
   projects:
     - name: zephyr
-      url: https://github.com/zephyrproject-rtos/zephyr
+      remote: zephyrproject-rtos
       revision: v3.7.2
       import:
         name-allowlist:

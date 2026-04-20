@@ -25,9 +25,6 @@
  *
  */
 
-/* Bug fix: array was 10 entries (0..9) but MW_STATE_Power_Cycle=10.
- * iolink_mw_state_literals[10] read into iolink_mw_event_literals[0]
- * which is "None", producing "state None" in every error message. */
 static const char * const iolink_mw_state_literals[] = {
 	"Inactive_0",           /* 0  MW_STATE_Inactive */
 	"Startup_1",            /* 1  MW_STATE_Startup */
@@ -43,10 +40,6 @@ static const char * const iolink_mw_state_literals[] = {
 	"LAST"                  /* 11 MW_STATE_LAST */
 };
 
-/* Bug fix: array was only 13 entries (NONE..Port_event) while enum has 19.
- * Reading iolink_mw_event_literals[event] for event >= 13 was undefined
- * behaviour and happened to print strings from the adjacent od_state_literals
- * array (e.g. "Await_DL_ISDU_cnf"), hiding the real event name. */
 static const char * const iolink_mw_event_literals[] = {
 		"None",                  /* 0  MW_EVENT_NONE */
 		"Master_Port_Active",    /* 1 */

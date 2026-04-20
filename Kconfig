@@ -1,0 +1,10 @@
+# Calixto platform module — root Kconfig
+# Each driver module sources its own Kconfig independently.
+# To add a new driver: rsource "modules/<your-driver>/Kconfig"
+
+rsource "modules/iol-master/Kconfig"
+
+# Future drivers — uncomment as you add them:
+# rsource "modules/calixto-ethernet/Kconfig"
+# rsource "modules/calixto-eeprom/Kconfig"
+# rsource "modules/calixto-wifi/Kconfig"

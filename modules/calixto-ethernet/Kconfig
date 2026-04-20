@@ -2,4 +2,4 @@
 #
 # config CALIXTO_ETH
 #     bool "Calixto Ethernet driver"
-#     depends on SPI || ETH
+#     depends xxx

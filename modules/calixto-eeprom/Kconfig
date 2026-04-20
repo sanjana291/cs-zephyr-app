@@ -1,0 +1,5 @@
+# calixto-eeprom Kconfig
+#
+# config CALIXTO_EEPROM
+#     bool "Calixto EEPROM driver"
+#     depends on I2C || SPI

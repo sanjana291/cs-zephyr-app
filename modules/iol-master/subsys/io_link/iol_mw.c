@@ -512,11 +512,7 @@ static const iolink_fsm_mw_state_transitions_t iolink_mw_fsm[] = {
 		{/* Application_Callback_9 - MW_STATE_Application_Callback=8 */
 				.number_of_trans = NELEMENTS (mw_trans_s9),
 		    	.transitions     = mw_trans_s9},
-		{/* Port_event_9 - MW_STATE_Port_event=9 (placeholder, not used) */
-		    /* Bug fix: MW_STATE_Port_event=9 had no FSM entry, causing
-		     * MW_STATE_Power_Cycle=10 to read iolink_mw_fsm[10] which is
-		     * out-of-bounds on a 10-element array (indices 0..9). This made
-		     * every power cycle event silently fail and print 'state None'. */
+		{/* Port_event_9 - MW_STATE_Port_event=9  */
 				.number_of_trans = 0,
 		    	.transitions     = NULL},
 		{/* Power_Cycle_10 - MW_STATE_Power_Cycle=10 */

@@ -3,7 +3,6 @@
 
 &pinctrl {
 
-	/* conflicts with fxos8700 sensor */
 	pinmux_csi: pinmux_csi {
 		group0 {
 			pinmux = <&iomuxc_gpio_ad_24_lpuart1_tx>,

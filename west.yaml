@@ -1,6 +1,6 @@
 manifest:
   self:
-    path: calixto-zephyr-app
+    path: cs-zephyr-app
 
   remotes:
     - name: zephyrproject-rtos

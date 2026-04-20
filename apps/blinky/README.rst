@@ -1,0 +1,1 @@
+The blinky example blinks an LED forever using the :ref:`GPIO API <gpio_api>`.

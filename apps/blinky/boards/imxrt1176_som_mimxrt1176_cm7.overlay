@@ -1,0 +1,14 @@
+
+/{
+
+aliases {
+		led0 = &green_led;
+    };
+leds {
+		compatible = "gpio-leds";
+    status = "okay";
+		green_led: led-1 {
+			gpios = <&gpio8 28 GPIO_ACTIVE_LOW>;
+			label = "Green LED";
+		};
+}

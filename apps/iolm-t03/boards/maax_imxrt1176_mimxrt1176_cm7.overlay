@@ -1,0 +1,47 @@
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+
+&pinctrl {
+
+	/* conflicts with fxos8700 sensor */
+	pinmux_csi: pinmux_csi {
+		group0 {
+			pinmux = <&iomuxc_gpio_ad_24_lpuart1_tx>,
+				<&iomuxc_gpio_ad_25_lpuart1_rx>,
+				<&iomuxc_gpio_disp_b2_12_lpspi4_sck>,
+				<&iomuxc_gpio_disp_b2_13_lpspi4_sdi>,
+				<&iomuxc_gpio_disp_b2_14_lpspi4_sdo>;
+			drive-strength = "high";
+			bias-pull-down;
+			slew-rate = "fast";
+		};
+		group1 {
+			pinmux = <&iomuxc_gpio_ad_28_gpio_mux3_io27>,
+				<&iomuxc_gpio_disp_b2_15_lpspi4_pcs0>;
+			drive-strength = "high";
+			bias-pull-up;
+			slew-rate = "fast";
+		};
+	};
+};
+
+&lpspi4 {
+    status = "okay";
+
+    pinctrl-0 = <&pinmux_csi>;
+    pinctrl-names = "default";
+
+    cs-gpios = <&gpio11 16 GPIO_ACTIVE_LOW>;
+
+    pcs-sck-delay = <200>;
+    sck-pcs-delay = <200>;
+    transfer-delay = <200>;
+
+    cce4511_0: cce4511@0 {
+        compatible = "renesas,cce4511";
+        reg = <0>;
+        spi-max-frequency = <2500000>;
+
+        irq-gpios = <&gpio3 27 GPIO_ACTIVE_LOW>;
+    };
+};

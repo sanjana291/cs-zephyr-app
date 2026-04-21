@@ -1,0 +1,6 @@
+name: iol_master
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    dts_root: .

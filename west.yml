@@ -1,6 +1,6 @@
 manifest:
   self:
-    path: cs-zephyr-app
+    path: cs-z
 
   remotes:
     - name: zephyrproject-rtos

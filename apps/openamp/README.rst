@@ -1,12 +1,11 @@
 .. zephyr:code-sample:: openamp
-:name: OpenAMP
-:relevant-api: ipm_interface
+   :name: OpenAMP
+   :relevant-api: ipm_interface
 
 Send messages between two cores using OpenAMP.
 
 Overview
-
----
+********
 
 This application demonstrates how to use OpenAMP with Zephyr for
 inter-core communication on multicore platforms. It shows how to
@@ -19,8 +18,7 @@ commands and board support may differ from the upstream Zephyr
 OpenAMP sample.
 
 Prerequisites
-
----
+***********************************************
 
 Before building the application, run the following command from the
 `<zephyr_workspace>/modules` directory using Git Bash:
@@ -35,21 +33,19 @@ This updates the minimum CMake version required by the OpenAMP and
 Libmetal modules.
 
 
-Building the Application
-
----
+Building the Application for maax_imxrt1176_cm7
+***********************************************
 
 From the application root directory, build the project using sysbuild:
 
 .. code-block:: bash
 
-west build -b <board_name> --sysbuild
+west build -b maax_imxrt1176/mimxrt1176/cm7 --sysbuild calixto-zephyr-app/apps/openamp
 
 Replace `<board_name>` with the target board that supports OpenAMP.
 
 Running the Application
-
----
+***********************************************
 
 Open a serial terminal and connect to the board using the appropriate
 UART settings for your platform.

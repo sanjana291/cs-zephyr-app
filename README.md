@@ -33,14 +33,14 @@ This updates the minimum CMake version required by the OpenAMP and
 Libmetal modules.
 
 
-Building the Application
+Building the Application for maax_imxrt1176_cm7
 ***********************************************
 
 From the application root directory, build the project using sysbuild:
 
 .. code-block:: bash
 
-west build -b <board_name> --sysbuild
+west build -b maax_imxrt1176/mimxrt1176/cm7 --sysbuild calixto-zephyr-app/apps/openamp
 
 Replace `<board_name>` with the target board that supports OpenAMP.
 

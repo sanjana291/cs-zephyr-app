@@ -25,9 +25,9 @@ Before building the application, run the following command from the
 
 .. code-block:: bash
 
-sed -i 's/VERSION 3.0.2/VERSION 3.20.0/' 
-hal/libmetal/libmetal/CMakeLists.txt 
-lib/open-amp/open-amp/CMakeLists.txt
+   sed -i 's/VERSION 3.0.2/VERSION 3.20.0/' 
+   hal/libmetal/libmetal/CMakeLists.txt 
+   lib/open-amp/open-amp/CMakeLists.txt
 
 This updates the minimum CMake version required by the OpenAMP and
 Libmetal modules.

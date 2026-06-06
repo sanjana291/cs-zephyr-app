@@ -64,7 +64,7 @@ serial port, one is master another is remote:
 
 .. code-block:: console
 
-   **** Booting Zephyr OS build zephyr-v1.14.0-2064-g888fc98fddaa ****
+   **** Booting Zephyr OS build zephyr-v3.7.2 ****
    Starting application thread!
 
    OpenAMP[master] demo started
@@ -78,7 +78,7 @@ serial port, one is master another is remote:
 
 .. code-block:: console
 
-   **** Booting Zephyr OS build zephyr-v1.14.0-2064-g888fc98fddaa ****
+   **** Booting Zephyr OS build zephyr-v3.7.2  ****
    Starting application thread!
 
    OpenAMP[remote] demo started

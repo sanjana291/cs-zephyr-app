@@ -52,23 +52,40 @@ UART settings for your platform.
 
 After programming and resetting the board, the primary and remote cores
 will exchange messages through OpenAMP.
+Open a serial terminal (minicom, putty, etc.) and connect the board with the
+following settings:
 
-Example output from the primary core:
+- Speed: 115200
+- Data: 8 bits
+- Parity: None
+- Stop bits: 1
 
-.. code-block:: console
-
-OpenAMP[master] demo started
-Master core received a message: 1
-Master core received a message: 3
-...
-OpenAMP demo ended.
-
-Example output from the remote core:
+Reset the board and the following message will appear on the corresponding
+serial port, one is master another is remote:
 
 .. code-block:: console
 
-OpenAMP[remote] demo started
-Remote core received a message: 0
-Remote core received a message: 2
-...
-OpenAMP demo ended.
+   **** Booting Zephyr OS build zephyr-v1.14.0-2064-g888fc98fddaa ****
+   Starting application thread!
+
+   OpenAMP[master] demo started
+   Master core received a message: 1
+   Master core received a message: 3
+   Master core received a message: 5
+   ...
+   Master core received a message: 99
+   OpenAMP demo ended.
+
+
+.. code-block:: console
+
+   **** Booting Zephyr OS build zephyr-v1.14.0-2064-g888fc98fddaa ****
+   Starting application thread!
+
+   OpenAMP[remote] demo started
+   Remote core received a message: 0
+   Remote core received a message: 2
+   Remote core received a message: 4
+   ...
+   Remote core received a message: 98
+   OpenAMP demo ended.

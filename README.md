@@ -1,12 +1,11 @@
 .. zephyr:code-sample:: openamp
-:name: OpenAMP
-:relevant-api: ipm_interface
+   :name: OpenAMP
+   :relevant-api: ipm_interface
 
 Send messages between two cores using OpenAMP.
 
 Overview
-
----
+********
 
 This application demonstrates how to use OpenAMP with Zephyr for
 inter-core communication on multicore platforms. It shows how to
@@ -19,8 +18,7 @@ commands and board support may differ from the upstream Zephyr
 OpenAMP sample.
 
 Prerequisites
-
----
+***********************************************
 
 Before building the application, run the following command from the
 `<zephyr_workspace>/modules` directory using Git Bash:
@@ -36,8 +34,7 @@ Libmetal modules.
 
 
 Building the Application
-
----
+***********************************************
 
 From the application root directory, build the project using sysbuild:
 
@@ -48,8 +45,7 @@ west build -b <board_name> --sysbuild
 Replace `<board_name>` with the target board that supports OpenAMP.
 
 Running the Application
-
----
+***********************************************
 
 Open a serial terminal and connect to the board using the appropriate
 UART settings for your platform.
@@ -76,4 +72,3 @@ Remote core received a message: 0
 Remote core received a message: 2
 ...
 OpenAMP demo ended.
-

@@ -40,9 +40,8 @@ From the application root directory, build the project using sysbuild:
 
 .. code-block:: bash
 
-west build -b maax_imxrt1176/mimxrt1176/cm7 --sysbuild calixto-zephyr-app/apps/openamp
+   west build -b maax_imxrt1176/mimxrt1176/cm7 --sysbuild calixto-zephyr-app/apps/openamp
 
-Replace `<board_name>` with the target board that supports OpenAMP.
 
 Running the Application
 ***********************************************
